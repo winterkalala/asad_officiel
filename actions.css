@@ -1,0 +1,741 @@
+/*
+thème de couleur 
+- couleur 1 : #5D6E1E (Vert foncé)
+- couleur 2 : #CBE54E (Vert clair)
+- couleur 3 : #253E33 (Vert très foncé)
+- couleur 4 : #A52F09 (Orange/terre)
+- couleur 5 : #F5F5F5 (Blanc cassé)
+- couleur 6 : #2C5530 (Vert moyen)
+
+Améliorations d'accessibilité:
+- Contraste suffisant
+- Taille de police adaptée
+- Navigation claire
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f5f5f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Header et Navigation - IDENTIQUE à la page 1 */
+.barre {
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px;
+    background: linear-gradient(rgba(37, 62, 51, 0.9), rgba(37, 62, 51, 0.7)), 
+                url('image/fond/actions-hero.jpg') center/cover no-repeat;
+    color: white;
+    position: relative;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid #CBE54E;
+    transition: transform 0.3s ease;
+}
+
+header img:hover {
+    transform: scale(1.05);
+}
+
+/* Navigation améliorée pour accessibilité */
+.menu ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.menu li a {
+    color: #CBE54E;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.menu li a:hover,
+.menu li a:focus {
+    color: #253E33;
+    background-color: #CBE54E;
+    outline: 2px solid #CBE54E;
+}
+
+#service {
+    background-color: #A52F09;
+    color: white;
+}
+
+/* Hero Section - Adapté pour "Nos actions" */
+.mini-b {
+    max-width: 800px;
+    margin: 80px auto 0;
+    padding: 40px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.mini-b h1 {
+    color: #CBE54E;
+    font-size: clamp(32px, 5vw, 48px);
+    font-weight: 800;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.mini-b legend {
+    color: #f5f5f5;
+    font-size: clamp(18px, 2.5vw, 20px);
+    font-weight: 400;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* Slider - Design cohérent */
+.slider {
+    width: 100%;
+    height: 70vh;
+    min-height: 500px;
+    max-height: 700px;
+    overflow: hidden;
+    position: relative;
+    margin: 40px 0;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+figure {
+    position: relative;
+    width: 400%;
+    height: 100%;
+    margin: 0;
+    animation: 20s slide infinite ease-in-out;
+}
+
+.slide {
+    position: relative;
+    width: 25%;
+    height: 100%;
+    float: left;
+}
+
+.slide::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(37, 62, 51, 0.7), rgba(93, 110, 30, 0.5));
+    z-index: 1;
+}
+
+.slide h1 {
+    position: absolute;
+    font-size: clamp(32px, 5vw, 48px);
+    width: 100%;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-weight: 800;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    padding: 0 20px;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+@keyframes slide {
+    0%, 20% {
+        left: 0;
+    }
+    25%, 45% {
+        left: -100%;
+    }
+    50%, 70% {
+        left: -200%;
+    }
+    75%, 95% {
+        left: -300%;
+    }
+    100% {
+        left: 0;
+    }
+}
+
+/* Sections générales - Même structure que page 1 */
+.block1, .block2, .block3, .fdon {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 0 20px;
+}
+
+/* Section Qui sommes-nous - Même style que page 1 */
+.block1 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+}
+
+.b1 {
+    flex: 1;
+    min-width: 300px;
+    padding: 40px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.b1:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.b1 h2 {
+    color: #253E33;
+    font-size: clamp(28px, 4vw, 36px);
+    margin-bottom: 20px;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.b1 h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100px;
+    height: 4px;
+    background-color: #CBE54E;
+}
+
+.b1 legend {
+    color: #555;
+    font-size: clamp(16px, 2vw, 18px);
+    line-height: 1.7;
+    font-style: normal;
+    display: block;
+    text-align: justify;
+}
+
+/* Image container - Style cohérent */
+.img1 {
+    flex: 1;
+    min-width: 300px;
+    height: 400px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.img1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*background: linear-gradient(45deg, rgba(93, 110, 30, 0.8), rgba(37, 62, 51, 0.9)); */
+    z-index: 1;
+}
+
+.img2 {
+    width: 100%;
+    height: 100%;
+    background: url('image/objets/helpHealth.jpg') center/cover no-repeat;
+    animation: zoomEffect 20s infinite alternate ease-in-out; 
+    position: relative;
+    z-index: 0;
+}
+
+@keyframes zoomEffect {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+.img3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    text-align: center;
+}
+
+.img3 a {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #A52F09;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+.img3 a:hover {
+    background-color: #CBE54E;
+    color: #253E33;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Grille des actions - Même design que .block2 de la page 1 */
+.block2, .block3 {
+    text-align: center;
+}
+
+.block2 .titre, .block3 .titre {
+    margin-bottom: 50px;
+}
+
+.block2 .titre h2, .block3 .titre h2 {
+    color: #253E33;
+    font-size: clamp(28px, 4vw, 36px);
+    position: relative;
+    display: inline-block;
+    padding-bottom: 15px;
+}
+
+.block2 .titre h2::after,
+.block3 .titre h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background-color: #CBE54E;
+}
+
+.block2, .block3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.back1, .back2, .back3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 40px 30px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    min-height: 350px;
+    position: relative;
+    overflow: hidden;
+}
+
+.back1:hover, .back2:hover, .back3:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.back1::before,
+.back2::before,
+.back3::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+}
+
+.back1::before {
+    background: linear-gradient(90deg, #A52F09, #FF8C42);
+}
+
+.back2::before {
+    background: linear-gradient(90deg, #5D6E1E, #CBE54E);
+}
+
+.back3::before {
+    background: linear-gradient(90deg, #253E33, #2C5530);
+}
+
+.back1 h3,
+.back2 h3,
+.back3 h3 {
+    color: #253E33;
+    font-size: clamp(20px, 2.5vw, 24px);
+    font-weight: 700;
+    text-align: center;
+    position: relative;
+    padding-bottom: 15px;
+    margin-top: 10px;
+}
+
+.back1 h3::after,
+.back2 h3::after,
+.back3 h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+}
+
+.back1 h3::after {
+    background-color: #A52F09;
+}
+
+.back2 h3::after {
+    background-color: #5D6E1E;
+}
+
+.back3 h3::after {
+    background-color: #253E33;
+}
+
+.back1 legend,
+.back2 legend,
+.back3 legend {
+    color: #666;
+    font-size: clamp(14px, 2vw, 16px);
+    line-height: 1.6;
+    flex-grow: 1;
+    text-align: justify;
+}
+
+/* Boutons - Même style que page 1 */
+button {
+    background-color: #A52F09;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+button a {
+    color: #f5f5f5;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+}
+
+button:hover,
+button:focus {
+    background-color: #CBE54E;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+button:hover a {
+    color: #253E33;
+}
+
+/* Section services - Même design que .block3 de la page 1 */
+.fdon {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+    background: #253E33;
+    color: white;
+    padding: 60px 40px;
+    border-radius: 20px;
+}
+
+.fdon .fd1 {
+    flex: 1;
+    min-width: 300px;
+}
+
+.fdon .fd1 h2 {
+    color: #CBE54E;
+    font-size: clamp(24px, 3vw, 32px);
+    margin-bottom: 20px;
+}
+
+.fdon .fd1 legend {
+    color: #ddd;
+    font-size: clamp(16px, 2vw, 18px);
+    margin-bottom: 30px;
+    line-height: 1.7;
+}
+
+.servi {
+    margin-bottom: 15px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.servi::before {
+    content: '→';
+    color: #CBE54E;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.servi a {
+    color: white;
+    text-decoration: none;
+    font-size: clamp(14px, 2vw, 16px);
+    transition: color 0.3s ease;
+    display: inline-block;
+    padding: 5px 0;
+}
+
+.servi a:hover {
+    color: #CBE54E;
+    text-decoration: underline;
+    transform: translateX(5px);
+}
+
+/* Footer - Identique à la page 1 */
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+    background: #253E33;
+    color: white;
+    padding: 60px 40px 30px;
+    margin-top: 80px;
+    max-width: 100%;
+}
+
+.colon {
+    flex: 1;
+    min-width: 200px;
+}
+
+.colon h3 {
+    color: #CBE54E;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.colon ul {
+    list-style: none;
+}
+
+.colon li {
+    margin-bottom: 12px;
+}
+
+.colon a {
+    color: #ddd;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.colon a:hover {
+    color: #CBE54E;
+}
+
+/* Copyright - Identique aux autres pages */
+.copyright {
+    background: #1a2924;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+}
+
+.copyright a {
+    color: #CBE54E;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* Media Queries pour le Responsive - Mêmes breakpoints que page 1 */
+
+/* Tablettes */
+@media (max-width: 1024px) {
+    .menu ul {
+        gap: 15px;
+    }
+    
+    .menu li a {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+    
+    .mini-b {
+        margin-top: 40px;
+        padding: 30px;
+    }
+    
+    .slider {
+        height: 60vh;
+    }
+}
+
+/* Mobiles */
+@media (max-width: 768px) {
+    .barre {
+        min-height: auto;
+        padding-bottom: 60px;
+    }
+    
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .menu ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    
+    .menu li a {
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+    
+    .mini-b {
+        padding: 20px;
+        margin-top: 30px;
+    }
+    
+    .block1, .fdon {
+        flex-direction: column;
+    }
+    
+    .img1 {
+        min-height: 300px;
+    }
+    
+    .block2, .block3 {
+        grid-template-columns: 1fr;
+    }
+    
+    footer {
+        flex-direction: column;
+        gap: 30px;
+        padding: 40px 20px;
+    }
+}
+
+/* Très petits écrans */
+@media (max-width: 480px) {
+    .menu ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .menu li {
+        margin-bottom: 10px;
+    }
+    
+    button {
+        padding: 12px 30px;
+    }
+    
+    button a {
+        font-size: 16px;
+    }
+    
+    .block1, .block2, .block3, .fdon {
+        margin: 40px auto;
+        padding: 0 15px;
+    }
+    
+    .b1 {
+        padding: 30px 20px;
+    }
+    
+    .back1, .back2, .back3 {
+        padding: 30px 20px;
+    }
+}
+
+/* Accessibilité - Focus visible - Même que page 1 */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus {
+    outline: 3px solid #CBE54E;
+    outline-offset: 2px;
+}
+
+/* Animation d'entrée - Même que page 1 */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.block1, .block2, .block3, .fdon {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+/* Ajustement pour le titre de la section services dans .fdon */
+.fdon h2 {
+    color: #CBE54E;
+    font-size: clamp(28px, 4vw, 36px);
+    margin-bottom: 30px;
+    text-align: center;
+    width: 100%;
+}
+
+.fdon .fd1 {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+}

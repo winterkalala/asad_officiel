@@ -1,0 +1,680 @@
+/*
+thème de couleur 
+- couleur 1 : #5D6E1E (Vert foncé)
+- couleur 2 : #CBE54E (Vert clair)
+- couleur 3 : #253E33 (Vert très foncé)
+- couleur 4 : #A52F09 (Orange/terre)
+- couleur 5 : #F5F5F5 (Blanc cassé)
+- couleur 6 : #2C5530 (Vert moyen)
+
+Améliorations d'accessibilité:
+- Contraste suffisant
+- Taille de police adaptée
+- Navigation claire
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f5f5f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Header et Navigation - IDENTIQUE aux autres pages */
+.barre {
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px;
+    background: linear-gradient(rgba(37, 62, 51, 0.9), rgba(37, 62, 51, 0.7)), 
+                url('image/fond/doc-hero.jpg') center/cover no-repeat;
+    color: white;
+    position: relative;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid #CBE54E;
+    transition: transform 0.3s ease;
+}
+
+header img:hover {
+    transform: scale(1.05);
+}
+
+/* Navigation améliorée pour accessibilité */
+.menu ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.menu li a {
+    color: #CBE54E;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.menu li a:hover,
+.menu li a:focus {
+    color: #253E33;
+    background-color: #CBE54E;
+    outline: 2px solid #CBE54E;
+}
+
+#service {
+    background-color: #A52F09;
+    color: white;
+}
+
+/* Hero Section - Même structure que les autres pages */
+.mini-b {
+    max-width: 800px;
+    margin: 80px auto 0;
+    padding: 40px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.mini-b h1 {
+    color: #CBE54E;
+    font-size: clamp(32px, 5vw, 48px);
+    font-weight: 800;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.mini-b legend {
+    color: #f5f5f5;
+    font-size: clamp(18px, 2.5vw, 20px);
+    font-weight: 400;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+button {
+    background-color: #A52F09;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+}
+
+button a {
+    color: #f5f5f5;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+}
+
+button:hover,
+button:focus {
+    background-color: #CBE54E;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+button:hover a {
+    color: #253E33;
+}
+
+/* Sections générales - Même structure que les autres pages */
+.doc-section, .documents-grid, .team-section {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 0 20px;
+}
+
+/* Section Présentation - Même style que .block1 des autres pages */
+.doc-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+}
+
+.doc-presentation {
+    flex: 1;
+    min-width: 300px;
+    padding: 40px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.doc-presentation:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.doc-presentation h1 {
+    color: #253E33;
+    font-size: clamp(28px, 4vw, 36px);
+    margin-bottom: 20px;
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.doc-presentation h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100px;
+    height: 4px;
+    background-color: #CBE54E;
+}
+
+.doc-presentation .text legend {
+    color: #555;
+    font-size: clamp(16px, 2vw, 18px);
+    line-height: 1.7;
+    display: block;
+    text-align: justify;
+}
+
+/* Galerie d'images documents - Design cohérent */
+.doc-gallery {
+    flex: 1;
+    min-width: 300px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.image1, .image2, .image3 {
+    width: 100%;
+    height: 200px;
+    border-radius: 15px;
+    background: linear-gradient(45deg, #5D6E1E, #253E33);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    position: relative;
+    overflow: hidden;
+}
+
+.image1::before, .image2::before, .image3::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(93, 110, 30, 0.8), rgba(37, 62, 51, 0.9));
+}
+
+.image1::after {
+    content: 'Document officiel';
+    position: absolute;
+    z-index: 1;
+}
+
+.image2::after {
+    content: 'Certification';
+    position: absolute;
+    z-index: 1;
+}
+
+.image3::after {
+    content: 'Accréditation';
+    position: absolute;
+    z-index: 1;
+}
+
+/* Section Titre des documents */
+.doc-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.doc-title h2 {
+    color: #253E33;
+    font-size: clamp(28px, 4vw, 36px);
+    position: relative;
+    display: inline-block;
+    padding-bottom: 15px;
+}
+
+.doc-title h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background-color: #CBE54E;
+}
+
+/* Grille des documents - Même design grid que les autres pages */
+.documents-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.boite1 {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    min-height: 350px;
+}
+
+.boite1:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.boite1 img {
+    width: 100px;
+    height: 100px; 
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.boite1 p {
+    color: #253E33;
+    font-size: clamp(16px, 2vw, 18px);
+    font-weight: 700;
+    text-align: center;
+    margin: 10px 0;
+}
+
+.boite1 button {
+    background-color: #5D6E1E;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+}
+
+.boite1 button:hover {
+    background-color: #CBE54E;
+    color: #253E33;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.boite1 a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* Section Équipe - Même structure */
+.team-section {
+    text-align: center;
+}
+
+.team-section .titre-long {
+    color: #253E33;
+    font-size: clamp(28px, 4vw, 36px);
+    margin-bottom: 50px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 15px;
+}
+
+.team-section .titre-long::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background-color: #CBE54E;
+}
+
+/* Grille de l'équipe - Même design grid */
+.teams {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.farde {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    min-height: 400px;
+}
+
+.farde:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+    border-top: 4px solid #A52F09;
+}
+
+.farde img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #5D6E1E, #253E33);
+    padding: 5px;
+    border: 3px solid #CBE54E;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 600;
+}
+
+.farde .text {
+    text-align: center;
+    width: 100%;
+}
+
+.farde .text p {
+    color: #333;
+    font-size: 14px;
+    margin-bottom: 8px;
+    padding: 5px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.farde .text p:first-child {
+    color: #253E33;
+    font-weight: 700;
+    font-size: 16px;
+    border-bottom: 2px solid #CBE54E;
+    padding-bottom: 10px;
+}
+
+.farde .text legend {
+    color: #5D6E1E;
+    font-size: 14px;
+    font-style: italic;
+    margin-top: 15px;
+    padding: 10px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    display: block;
+}
+
+/* Footer - Identique aux autres pages */
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+    background: #253E33;
+    color: white;
+    padding: 60px 40px 30px;
+    margin-top: 80px;
+    max-width: 100%;
+}
+
+.colon {
+    flex: 1;
+    min-width: 200px;
+}
+
+.colon h3 {
+    color: #CBE54E;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.colon ul {
+    list-style: none;
+}
+
+.colon li {
+    margin-bottom: 12px;
+}
+
+.colon a {
+    color: #ddd;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.colon a:hover {
+    color: #CBE54E;
+}
+
+/* Copyright - Identique aux autres pages */
+.copyright {
+    background: #1a2924;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+}
+
+.copyright a {
+    color: #CBE54E;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* Media Queries pour le Responsive - Mêmes breakpoints que les autres pages */
+
+/* Tablettes */
+@media (max-width: 1024px) {
+    .menu ul {
+        gap: 15px;
+    }
+    
+    .menu li a {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+    
+    .mini-b {
+        margin-top: 40px;
+        padding: 30px;
+    }
+    
+    .doc-section {
+        flex-direction: column;
+    }
+    
+    .doc-gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Mobiles */
+@media (max-width: 768px) {
+    .barre {
+        min-height: auto;
+        padding-bottom: 60px;
+    }
+    
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .menu ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+    
+    .menu li a {
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+    
+    .mini-b {
+        padding: 20px;
+        margin-top: 30px;
+    }
+    
+    .doc-section, .documents-grid, .team-section {
+        margin: 40px auto;
+        padding: 0 20px;
+    }
+    
+    .doc-gallery {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+    
+    .documents-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .teams {
+        grid-template-columns: 1fr;
+    }
+    
+    .farde {
+        padding: 25px 20px;
+        min-height: 350px;
+    }
+    
+    footer {
+        flex-direction: column;
+        gap: 30px;
+        padding: 40px 20px;
+    }
+}
+
+/* Très petits écrans */
+@media (max-width: 480px) {
+    .menu ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .menu li {
+        margin-bottom: 10px;
+    }
+    
+    button {
+        padding: 12px 30px;
+    }
+    
+    button a {
+        font-size: 16px;
+    }
+    
+    .doc-presentation {
+        padding: 30px 20px;
+    }
+    
+    .image1, .image2, .image3 {
+        height: 150px;
+    }
+    
+    .boite1 {
+        padding: 25px 20px;
+    }
+    
+    .farde img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+/* Accessibilité - Focus visible - Même que les autres pages */
+a:focus,
+button:focus,
+input:focus,
+textarea:focus {
+    outline: 3px solid #CBE54E;
+    outline-offset: 2px;
+}
+
+/* Animation d'entrée - Même que les autres pages */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.doc-section, .documents-grid, .team-section {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+/* Style pour les documents téléchargeables */
+.download-icon {
+    display: inline-block;
+    margin-right: 8px;
+    font-size: 18px;
+}
+
+/* Badge pour nouveaux documents */
+.new-badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: #A52F09;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 10px;
+    font-weight: 700;
+    z-index: 1;
+}
+

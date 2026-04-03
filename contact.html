@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="contact.css">
+    <title>Contact - ASAD</title>
+
+    <!-- EmailJS SDK --> 
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <!-- Initialisation EmailJS --> 
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("2ZBAEZ0kIaj0gyN4V"); // Remplacez par votre clé publique 
+        })();
+    </script>
+
+</head>
+<body>
+    <!-- tête du site - Même structure que les autres pages --> 
+    <div class="barre">
+        <header>
+            <div>
+                <img src="image/logo/ASAD logo GOOD.jpg" alt="Logo ASAD"> 
+            </div>
+            <div class="menu"> 
+                <ul>
+                    <li><a href="index.html" class="services">Accueil</a></li>
+                    <li><a href="actions.html" class="services">Nos actions</a></li>
+                    <li><a href="actu.html" class="services">Actualité et événement</a></li>
+                    <li><a href="document.html" class="services">Document et Publication</a></li>
+                    <li><a href="" class="services" id="service">Contact</a></li>
+                </ul>
+            </div>
+        </header>
+        
+        <!-- Hero Section - Même structure que les autres pages -->
+        <div class="mini-b">
+            <h1>Contactez-nous</h1>
+            <legend>
+                Nous sommes à votre écoute pour répondre à vos questions, 
+                vos préoccupations ou pour toute demande de partenariat.
+            </legend>
+            <button>
+                <a href="#contact-form">Écrire un message</a>
+            </button>
+        </div>
+    </div>
+
+    <!-- Section Contact - Même structure que les autres pages -->
+    <div class="contact-section" id="contact-form">
+        <div class="section-title">
+            <h2>Contacter-nous</h2>
+        </div>
+        
+        <div class="contact-grid">
+            <div class="contact-form">
+                <form action="#" method="post" id="contactForm">
+                    <div class="formulaire">
+                        <div class="donnée">
+                            <label for="nom">VOTRE NOM</label>
+                            <input type="text" id="nom" name="nom" required 
+                                   placeholder="Votre nom complet">
+                        </div>
+                        
+                        <div class="donnée">
+                            <label for="email">VOTRE EMAIL</label>
+                            <input type="email" id="email" name="email" required 
+                                   placeholder="votre.email@exemple.com">
+                        </div>
+                        
+                        <div class="donnée">
+                            <label for="telephone">VOTRE TÉLÉPHONE</label>
+                            <input type="tel" id="telephone" name="telephone" 
+                                   placeholder="+243 8XX XXX XXX">
+                        </div>
+                        
+                        <div class="donnée">
+                            <label for="preoccupation">VOTRE PRÉOCCUPATION</label>
+                            <textarea id="preoccupation" name="preoccupation" 
+                                      placeholder="Décrivez votre message ici..." 
+                                      required></textarea>
+                        </div>
+                        
+                        <div class="donnée">
+                            <input type="submit" value="ENVOYER LE MESSAGE" 
+                                   name="submit" id="submitBtn">
+                        </div>
+                    </div>
+                </form>
+                
+                <!-- Message de succès (caché par défaut) -->
+                <div class="success-message" id="successMessage">
+                    Votre message a été envoyé avec succès ! Nous vous répondrons dans les plus brefs délais.
+                </div>
+            </div>
+            
+            <div class="contact-info">
+                <h3>Nos coordonnées</h3>
+                
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <p><span class="contact-icon">📞</span> Secrétariat</p> 
+                        <a href="tel:+243811636138">+243 811 636 138</a>
+                        <a href="mailto:Kamanga.amos07@gmail.com">Kamanga.amos07@gmail.com</a>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <p><span class="contact-icon">👑</span> Président</p>
+                        <a href="tel:+243822695736">+243 822 695 736</a>
+                        <a href="mailto:rioalbert.ndwani01@gmail.com">rioalbert.ndwani01@gmail.com</a>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <p><span class="contact-icon">🤝</span> Partenariat</p>
+                        <a href="tel:+243899443917">+243 899 443 917</a> 
+                        <a href="mailto:ephraimekalala20@gmail.com">ephraimekalala20@gmail.com</a> 
+                    </div>
+                    
+                    <div class="contact-item">
+                        <p><span class="contact-icon">📍</span> Siège social</p>
+                        <a href="https://maps.google.com/?q=03+Avenue+jésus+qui+gueri,+N'sele,+Kinshasa" 
+                           target="_blank">
+                            03 Avenue Jésus qui gueri,<br>Commune de la N'sele, Kinshasa
+                        </a>
+                        <p>A 50 mètre de l'école Déo LUBALA </p> 
+                    </div>
+                </div>
+                
+                <div class="opening-hours">
+                    <h5>Horaires d'ouverture</h5>
+                    <p><span class="day">Lundi - Vendredi:</span> 8h00 - 17h00</p> 
+                    <p><span class="day">Samedi:</span> 10h30 - 13h30</p> 
+                    <p><span class="day">Dimanche:</span> Fermé</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section Coordonnées - Même structure grid -->
+    <div class="contact-map-section">
+        <div class="coordinates-grid">
+            <div class="coordinate-card">
+                <h4>Bureau de Kinshasa</h4>
+                <p><strong>Adresse:</strong> 03 Avenue Jésus qui gueri, N'sele/Kinkole</p> 
+                <p><strong>Téléphone:</strong> +243 811 636 138</p>
+                <p><strong>Email:</strong> rioalbert.ndwani01@gmail.com</p>
+                <p>Siège principal de l'Association</p>
+            </div>
+            
+            <div class="coordinate-card">
+                <h4>Bureau du Kongo-Central</h4>
+                <p><strong>Adresse:</strong> Avenue de la Révolution, Matadi</p> 
+                <p><strong>Téléphone:</strong> +243 811 636 138</p>
+                <p><strong>Email:</strong> rioalbert.ndwani01@gmail.com</p>
+                <p>Zone de couverture : Bas-Congo</p>
+            </div>
+            
+            <div class="coordinate-card">
+                <h4>Bureau du Kwango</h4>
+                <p><strong>Adresse:</strong> Quartier administratif, Kenge</p> 
+                <p><strong>Téléphone:</strong> +243 811 636 138</p>
+                <p><strong>Email:</strong> rioalbert.ndwani01@gmail.com</p>
+                <p>Zone de couverture : Kwango et Kwilu</p>
+            </div>
+        </div>
+        
+        <!-- Carte Google Maps -->
+        <div class="map-container">
+            <!-- Intégration Google Maps -->
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3979.804758697122!2d15.303842!3d-4.322999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1a6a33c3b3d3b3d3%3A0x1a6a33c3b3d3b3d3!2s2450%20Avenue%20des%20Huileries%2C%20Gombe%2C%20Kinshasa!5e0!3m2!1sfr!2scd!4v1234567890123" 
+                width="100%" 
+                height="400" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Carte localisant le siège de l'ASAD à Kinshasa"> 
+            </iframe>
+        </div>
+    </div>
+
+    <!-- Footer - Identique aux autres pages -->
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Navigation</h3>
+                <ul>
+                    <li><a href="index.html">À propos de nous</a></li>
+                    <li><a href="actions.html">Nos actions</a></li>
+                    <li><a href="actu.html">Actualité et Événements</a></li>
+                    <li><a href="document.html">Document et Publication</a></li>
+                    <li><a href="contact.html">Plus d'info</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Partenaires</h3>
+                <ul>
+                    <li> <a href=""> Ministère de personne vivante avec hadicap </a> </li>
+                    <li> <a href="https://afub-uafa.org/"> Union Africaine des Aveugles (UAFA) </a> </li>
+                    <li> <a href="https://wbu.ngo/"> Union Mondiale des Aveugles (UMA) </a> </li>
+                    <li> <a href="https://au.int/fr/node/3587"> Union Africaine (UA) </a> </li> 
+                    <li> <a href=""> Organisation des Nations Unies (ONU) </a> </li> 
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Contact & Support</h3>
+                <ul>
+                    <li><a href="https://ephraime-winter-dev.netlify.app/">Développeur Winter</a></li>
+                    <li><a href="">Aryo-tech</a></li>
+                    <li><a href="">Besoin d'un site ?</a></li>
+                    <li><a href="">Faire un don spécifique</a></li>
+                </ul>
+            </div> 
+            
+        </div>
+    </footer>
+    
+    <!-- Copyright - Identique aux autres pages -->
+    <div class="copyright">
+        <a href="https://ephraime-winter-dev.netlify.app/">
+            <p>Copyright © 2024 ASAD - Développé par Ephraime Kalala "Winter"</p>
+        </a>
+    </div>
+
+
+    <script>
+        // Initialisation EmailJS - REMPLACEZ LA CLÉ CI-DESSOUS
+        emailjs.init('2ZBAEZ0kIaj0gyN4V'); 
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = document.getElementById('contactForm');
+            const successMessage = document.getElementById('successMessage');
+            const submitBtn = document.getElementById('submitBtn');
+            
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Désactiver le bouton
+                submitBtn.value = 'Envoi en cours...';
+                submitBtn.disabled = true;
+                
+                // Préparer les données
+                const formData = {
+                    from_name: document.getElementById('nom').value,
+                    nom: document.getElementById('nom').value,
+                    email: document.getElementById('email').value,
+                    telephone: document.getElementById('telephone').value || 'Non renseigné',
+                    preoccupation: document.getElementById('preoccupation').value
+                };
+                
+                // Envoyer via EmailJS - REMPLACEZ LES IDs CI-DESSOUS
+                emailjs.send(
+                    'service_szgogkt',   // Votre Service ID
+                    'template_6dnquv6',  // Votre Template ID 
+                    formData
+                )
+                .then(function(response) {
+                    // Succès
+                    console.log('Email envoyé!', response);
+                    
+                    // Afficher message
+                    successMessage.style.display = 'block';
+                    setTimeout(() => {
+                        successMessage.style.opacity = '1';
+                    }, 10);
+                    
+                    // Réinitialiser
+                    contactForm.reset();
+                    submitBtn.value = 'ENVOYER LE MESSAGE';
+                    submitBtn.disabled = false;
+                    
+                    // Cacher message après 5s
+                    setTimeout(function() {
+                        successMessage.style.opacity = '0';
+                        setTimeout(() => {
+                            successMessage.style.display = 'none';
+                        }, 500);
+                    }, 5000);
+                    
+                }, function(error) {
+                    // Erreur
+                    console.error('Erreur:', error);
+                    alert('Erreur lors de l\'envoi. Veuillez réessayer.');
+                    
+                    // Réactiver le bouton
+                    submitBtn.value = 'ENVOYER LE MESSAGE';
+                    submitBtn.disabled = false;
+                });
+            });
+            
+            // Animation ancres
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId !== '#') {
+                        const targetElement = document.querySelector(targetId);
+                        if (targetElement) {
+                            window.scrollTo({
+                                top: targetElement.offsetTop - 100,
+                                behavior: 'smooth'
+                            });
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
